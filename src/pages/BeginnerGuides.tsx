@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Gamepad, Search, BookOpen, Target, Coffee, Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -99,7 +98,7 @@ const BeginnerGuides = () => {
 
         <div className="mt-20 text-center">
            <p className="text-xl font-bold text-brand-text mb-6">Ready to apply these steps?</p>
-           <Link to="/best-games" className="btn-secondary text-lg inline-flex">Pick a Game to Start</Link>
+           <Link to="/best-games" className="btn-secondary text-lg inline-block">Pick a Game to Start</Link>
         </div>
 
       </div>

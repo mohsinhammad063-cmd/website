@@ -3,16 +3,14 @@ import { Clock, BarChart, ChevronRight } from 'lucide-react';
 
 export interface TipCardProps {
   id?: string;
-  slug?: string;
-  type?: 'tip' | 'guide';
   title: string;
   description: string;
   category: string;
-  difficulty: 'Beginner' | 'Easy' | 'Medium' | 'Hard';
+  difficulty: 'Beginner' | 'Easy' | 'Medium';
   readTime: string;
 }
 
-const TipCard = ({ slug, type = 'tip', title, description, category, difficulty, readTime }: TipCardProps) => {
+const TipCard = ({ title, description, category, difficulty, readTime }: TipCardProps) => {
   const getDifficultyColor = () => {
     switch (difficulty) {
       case 'Beginner':
@@ -52,8 +50,9 @@ const TipCard = ({ slug, type = 'tip', title, description, category, difficulty,
           {readTime} read
         </div>
 
+        {/* Using Link to game-tips as a placeholder for full article view */}
         <Link
-          to={slug ? (type === 'tip' ? `/tips/${slug}` : `/guides/${slug}`) : "/game-tips"}
+          to="/game-tips"
           className="flex items-center gap-1 text-sm font-bold text-brand-primary hover:text-brand-text transition-colors"
         >
           Read more
