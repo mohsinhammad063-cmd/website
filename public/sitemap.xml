@@ -11,7 +11,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tricks-and-guides</loc>
+    <loc>https://hammad-s-guide.web.app/tricks-guides</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -26,93 +26,88 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/safe-gaming</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/minecraft-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/roblox-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/fortnite-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/racing-game-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/best-games-for-kids</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://hammad-s-guide.web.app/about</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/contact</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/shop</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/products</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/free-resources</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/coming-soon</loc>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/top-10-minecraft-tips-for-beginners</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/how-to-get-better-at-roblox-obby-games</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/best-settings-for-smooth-gameplay</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-practice-without-getting-frustrated</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/simple-tips-to-win-more-racing-games</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-build-better-in-minecraft</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/how-to-stay-safe-while-playing-online-games</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-avoid-scams-in-online-games</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-find-hidden-game-secrets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-improve-your-aim</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-save-coins-and-rewards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-complete-difficult-levels</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-choose-the-right-character</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-practice-without-getting-angry</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

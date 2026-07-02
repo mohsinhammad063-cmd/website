@@ -1,125 +1,176 @@
-import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Clock, ShieldAlert } from 'lucide-react';
-
-const mockArticles: Record<string, any> = {
-  "top-10-minecraft-tips-for-beginners": {
-    title: "Top 10 Minecraft Tips for Beginners",
-    category: "Minecraft",
-    difficulty: "Beginner",
-    ageBadge: "8-15",
-    readTime: "5 min",
-    content: "Surviving your first night in Minecraft can be tough. But with a little preparation, you can build a safe shelter, find food, and craft your first tools easily. Here are the top 10 tips every new player needs to know.",
-    quickTips: ["Don't build your first house with dirt.", "Craft a bed as soon as possible.", "Always carry a water bucket."]
-  },
-  "how-to-get-better-at-roblox-obby-games": {
-    title: "How to Get Better at Roblox Obby Games",
-    category: "Roblox",
-    difficulty: "Medium",
-    ageBadge: "8-15",
-    readTime: "4 min",
-    content: "Roblox Obby games require precise jumping and perfect timing. Many players get frustrated, but improving is just about learning a few simple techniques.",
-    quickTips: ["Zoom your camera out.", "Take your time on tricky jumps.", "Watch other players first."]
-  },
-  "how-to-stay-safe-while-playing-online-games": {
-    title: "How to Stay Safe While Playing Online Games",
-    category: "Safety",
-    difficulty: "Beginner",
-    ageBadge: "8-15",
-    readTime: "5 min",
-    content: "Playing games with friends online is awesome, but it's important to know the rules of online safety. Never share your password or personal details.",
-    quickTips: ["Use a nickname, not your real name.", "Mute mean players.", "Ask a parent before buying anything."]
-  },
-  "how-to-improve-your-aim": {
-    title: "How to Improve Your Aim",
-    category: "Guides",
-    difficulty: "Medium",
-    ageBadge: "8-15",
-    readTime: "6 min",
-    content: "Struggling to hit your targets? Aiming is a skill that takes practice, but you can speed up the process by changing some settings and practicing smart.",
-    quickTips: ["Lower your sensitivity.", "Practice in creative modes.", "Keep your crosshair at head height."]
-  },
-  "how-to-complete-difficult-levels": {
-    title: "How to Complete Difficult Levels",
-    category: "Guides",
-    difficulty: "Easy",
-    ageBadge: "8-15",
-    readTime: "4 min",
-    content: "We've all been there—stuck on a boss or a puzzle that seems impossible. Don't throw your controller! Here is the best way to beat hard levels.",
-    quickTips: ["Take a 5-minute break.", "Watch a video guide.", "Try a different strategy."]
-  }
-};
+import { useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { Clock, Shield, Gamepad2, AlertCircle, ChevronLeft, ChevronRight, Hash } from 'lucide-react';
+import { articles } from '../data/articles';
 
 const ArticleDetail = () => {
-  const { id } = useParams();
-  const article = id ? mockArticles[id] : null;
+  const { slug } = useParams<{ slug: string }>();
+
+  // Find article from both tips and guides based on slug
+  const article = articles.find((a) => a.slug === slug);
+
+  useEffect(() => {
+    if (article) {
+      document.title = `${article.title} | Master Hammad`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', article.description);
+      }
+    } else {
+      document.title = 'Article Not Found | Master Hammad';
+    }
+  }, [article]);
 
   if (!article) {
     return (
-      <div className="py-20 text-center">
-        <h1 className="text-3xl font-bold text-brand-text mb-4">Article Not Found</h1>
-        <Link to="/" className="btn-primary">Go Home</Link>
+      <div className="py-20 flex flex-col items-center justify-center text-center px-4 min-h-[60vh]">
+        <div className="w-24 h-24 rounded-full bg-brand-primary/10 flex items-center justify-center mb-6 border border-brand-primary/20">
+          <AlertCircle className="w-12 h-12 text-brand-primary" />
+        </div>
+        <h1 className="text-4xl font-bold text-brand-text mb-4">Article Not Found</h1>
+        <p className="text-brand-muted mb-8 max-w-md">
+          Oops! It looks like the tip or guide you're looking for doesn't exist or has been moved.
+        </p>
+        <Link to="/game-tips" className="btn-primary">
+          Back to Game Tips
+        </Link>
       </div>
     );
   }
 
+  const getDifficultyColor = () => {
+    switch (article.difficulty) {
+      case 'Beginner': return 'text-brand-secondary bg-brand-secondary/10 border-brand-secondary/30';
+      case 'Easy': return 'text-brand-primary bg-brand-primary/10 border-brand-primary/30';
+      case 'Medium': return 'text-brand-cta bg-brand-cta/10 border-brand-cta/30';
+      case 'Hard': return 'text-brand-purple bg-brand-purple/10 border-brand-purple/30';
+      default: return 'text-brand-muted bg-brand-muted/10 border-brand-muted/30';
+    }
+  };
+
   return (
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto">
 
-          <Link to={-1 as any} className="inline-flex items-center gap-2 text-brand-primary hover:text-brand-text mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Back
-          </Link>
+        {/* Back Button */}
+        <Link
+          to={article.type === 'tip' ? '/game-tips' : '/tricks-guides'}
+          className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-text transition-colors mb-8 group"
+        >
+          <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+          Back to {article.type === 'tip' ? 'Game Tips' : 'Guides'}
+        </Link>
 
-          <div className="mb-8">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="px-3 py-1 text-sm font-bold rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20">
-                {article.category}
-              </span>
-              <span className="px-3 py-1 text-sm font-bold rounded-full bg-brand-secondary/10 text-brand-secondary border border-brand-secondary/20">
-                {article.difficulty}
-              </span>
-              <span className="px-3 py-1 text-sm font-bold rounded-full bg-brand-purple/10 text-brand-purple border border-brand-purple/20">
-                {article.ageBadge}
-              </span>
-              <span className="flex items-center gap-1 text-sm text-brand-muted ml-auto">
-                <Clock className="w-4 h-4" /> {article.readTime}
-              </span>
+        {/* Hero Section */}
+        <div className="glass-card p-8 md:p-12 mb-12 relative overflow-hidden border-brand-primary/20">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+
+          <div className="flex flex-wrap gap-3 mb-6 relative z-10">
+            <span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-purple/20 text-brand-purple border border-brand-purple/30">
+              {article.category}
+            </span>
+            <span className={`px-3 py-1 text-sm font-medium rounded-full border ${getDifficultyColor()}`}>
+              {article.difficulty}
+            </span>
+            <span className="px-3 py-1 text-sm font-medium rounded-full bg-brand-card border border-white/10 text-brand-text flex items-center gap-1">
+              <Clock className="w-4 h-4 text-brand-muted" />
+              {article.readTime}
+            </span>
+            <span className="px-3 py-1 text-sm font-medium rounded-full bg-brand-card border border-white/10 text-brand-text">
+              Ages {article.ageRange}
+            </span>
+          </div>
+
+          <h1 className="text-3xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight relative z-10">
+            {article.title}
+          </h1>
+
+          <p className="text-xl text-brand-muted max-w-3xl relative z-10 leading-relaxed">
+            {article.description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-10">
+            {/* Table of Contents Box */}
+            <div className="glass-card p-6 border-brand-secondary/20">
+              <h3 className="text-xl font-bold text-brand-text mb-4 flex items-center gap-2">
+                <Hash className="w-5 h-5 text-brand-secondary" />
+                In this {article.type}
+              </h3>
+              <ul className="space-y-3">
+                {article.sections.map((section, idx) => (
+                  <li key={idx}>
+                    <a href={`#section-${idx}`} className="text-brand-muted hover:text-brand-secondary transition-colors flex items-center gap-2">
+                      <ChevronRight className="w-4 h-4" />
+                      {section.heading}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight">
-              {article.title}
-            </h1>
-          </div>
-
-          <div className="glass-card p-8 md:p-10 border-brand-primary/20 mb-10">
-            <p className="text-lg text-brand-muted leading-relaxed mb-8">
-              {article.content}
-            </p>
-
-            <h2 className="text-2xl font-bold text-brand-text mb-4 flex items-center gap-2">
-              <BookOpen className="w-6 h-6 text-brand-primary" /> Quick Tips
-            </h2>
-            <ul className="space-y-3">
-              {article.quickTips.map((tip: string, index: number) => (
-                <li key={index} className="flex gap-3 text-brand-muted">
-                  <span className="text-brand-primary font-bold">{index + 1}.</span> {tip}
-                </li>
+            {/* Article Sections */}
+            <div className="space-y-8">
+              {article.sections.map((section, idx) => (
+                <section key={idx} id={`section-${idx}`} className="scroll-mt-24">
+                  <h2 className="text-2xl font-bold text-brand-text mb-4">
+                    {section.heading}
+                  </h2>
+                  <div className="prose prose-invert prose-lg max-w-none text-brand-muted">
+                    <p>{section.body}</p>
+                  </div>
+                </section>
               ))}
-            </ul>
+            </div>
+
+            {/* Safety Reminder */}
+            {article.safetyNote && (
+              <div className="p-6 rounded-2xl bg-brand-primary/10 border border-brand-primary/30 flex gap-4 mt-12">
+                <Shield className="w-8 h-8 text-brand-primary shrink-0" />
+                <div>
+                  <h4 className="text-lg font-bold text-brand-text mb-1">Safety First!</h4>
+                  <p className="text-brand-muted">{article.safetyNote}</p>
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="glass-card p-6 border-brand-secondary/30 bg-brand-secondary/5 flex items-start gap-4 mb-12">
-            <ShieldAlert className="w-6 h-6 text-brand-secondary shrink-0 mt-1" />
-            <div>
-              <h3 className="font-bold text-brand-text mb-2">Safety Reminder</h3>
-              <p className="text-brand-muted text-sm leading-relaxed">
-                Remember to take breaks every hour! Gaming is fun, but resting your eyes and stretching is just as important. Never share personal info online.
-              </p>
+          {/* Sidebar */}
+          <div className="lg:col-span-1 space-y-8">
+            {/* Quick Tips Box */}
+            <div className="glass-card p-6 border-brand-cta/20 sticky top-24">
+              <h3 className="text-xl font-bold text-brand-text mb-4 flex items-center gap-2">
+                <Gamepad2 className="w-5 h-5 text-brand-cta" />
+                Quick Tips Summary
+              </h3>
+              <ul className="space-y-3">
+                {article.tips.map((tip, idx) => (
+                  <li key={idx} className="flex gap-3 text-brand-muted">
+                    <span className="text-brand-cta font-bold">•</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
         </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-20 text-center glass-card p-12 border-brand-secondary/30 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-2xl bg-brand-secondary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-60"></div>
+          <h2 className="text-3xl font-bold text-brand-text mb-4 relative z-10">Want more simple gaming tips?</h2>
+          <p className="text-lg text-brand-muted mb-8 max-w-xl mx-auto relative z-10">
+            Keep learning and improving your skills with our easy-to-follow guides and tricks.
+          </p>
+          <Link to="/game-tips" className="btn-secondary relative z-10 text-lg shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+            Explore More Game Tips
+          </Link>
+        </div>
+
       </div>
     </div>
   );
