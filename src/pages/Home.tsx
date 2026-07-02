@@ -16,29 +16,7 @@ const categories = [
   { title: "Top 10 Lists", icon: ListOrdered, path: "/best-games", color: "brand-primary" },
 ];
 
-const latestTips = [
-  {
-    title: "Top 10 Minecraft Tips for Beginners",
-    description: "Learn how to survive your first night, find food, and build a safe shelter in Minecraft.",
-    category: "Minecraft",
-    difficulty: "Beginner" as const,
-    readTime: "5 min"
-  },
-  {
-    title: "How to Get Better at Roblox Obby Games",
-    description: "Master jumps, avoid common traps, and complete difficult obstacle courses with these simple tricks.",
-    category: "Roblox",
-    difficulty: "Medium" as const,
-    readTime: "4 min"
-  },
-  {
-    title: "Simple Tips to Win More Racing Games",
-    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car for the track.",
-    category: "Racing Games",
-    difficulty: "Easy" as const,
-    readTime: "3 min"
-  }
-];
+import { articles } from '../data/articles';
 
 const popularGames = [
   { title: "Minecraft", category: "Survival / Creative", description: "Build, explore, and survive in an infinite blocky world.", isPopular: true },
@@ -105,7 +83,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {latestTips.map((tip, index) => (
+            {articles.filter(a => a.type === 'tip').slice(0, 3).map((tip, index) => (
               <TipCard key={index} {...tip} />
             ))}
           </div>
