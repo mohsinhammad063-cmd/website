@@ -33,15 +33,8 @@ const PrivacyPolicy = () => {
                 Information We Do NOT Collect
               </h3>
               <p className="text-brand-muted leading-relaxed">
-                We believe in keeping kids safe online. Therefore, this website does not ask users to share:
+                We believe in keeping kids safe online. Therefore, this website does not ask users to share passwords, game accounts, phone numbers, home addresses, school names, or private information. Children should not share personal information without parent permission.
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-brand-muted">
-                <li>Passwords or login details for games</li>
-                <li>Game account usernames or gamer tags</li>
-                <li>Phone numbers</li>
-                <li>Home addresses or school names</li>
-                <li>Private or sensitive personal information</li>
-              </ul>
             </div>
 
             <div className="space-y-4">
@@ -50,7 +43,7 @@ const PrivacyPolicy = () => {
                 Information We May Collect
               </h3>
               <p className="text-brand-muted leading-relaxed">
-                If you use our contact form, we collect the name and email address provided (which we ask to be a parent or guardian's email). This information is only used to reply to your question or suggestion and is never shared with anyone else or used for marketing.
+                The website may use basic hosting and analytics tools in the future. Any future analytics should be privacy-friendly and parent-safe.
               </p>
             </div>
 

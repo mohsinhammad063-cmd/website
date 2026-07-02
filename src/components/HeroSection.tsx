@@ -33,7 +33,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-brand-muted mb-10 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 leading-relaxed">
-            Simple tips, smart tricks, and beginner-friendly guides for young gamers. Master your favorite games safely and have fun doing it!
+            Simple gaming tips, tricks, beginner guides, and safe gaming advice for young players aged 8–15.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
@@ -41,7 +41,7 @@ const HeroSection = () => {
               Explore Game Tips
             </Link>
             <Link to="/beginner-guides" className="btn-secondary flex items-center gap-2 text-lg w-full sm:w-auto justify-center">
-              <Gamepad className="w-5 h-5" /> Start Beginner Guide
+              <Gamepad className="w-5 h-5" /> Read Beginner Guides
             </Link>
           </div>
 

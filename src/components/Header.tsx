@@ -6,9 +6,10 @@ import LogoBadge from './LogoBadge';
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Game Tips', path: '/game-tips' },
-  { name: 'Tricks & Guides', path: '/tricks-guides' },
+  { name: 'Tricks & Guides', path: '/tricks-and-guides' },
   { name: 'Best Games', path: '/best-games' },
   { name: 'Beginner Guides', path: '/beginner-guides' },
+  { name: 'Safe Gaming', path: '/safe-gaming' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -22,7 +23,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full glass-card rounded-none border-t-0 border-l-0 border-r-0 border-b border-brand-primary/20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between relative">
           <LogoBadge />
 
           {/* Desktop Navigation */}
@@ -62,7 +63,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full glass-card border-t-0 rounded-t-none border-brand-primary/20 py-4 shadow-xl shadow-brand-bg/80 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden absolute top-20 left-0 w-full glass-card border-t-0 rounded-t-none border-brand-primary/20 py-4 shadow-xl shadow-brand-bg/80 animate-in fade-in slide-in-from-top-2 duration-200 z-[100] max-h-[calc(100vh-5rem)] overflow-y-auto">
           <nav className="flex flex-col container mx-auto px-4 gap-2">
             {links.map((link) => (
               <NavLink

@@ -20,7 +20,7 @@ const Contact = () => {
             <div>
               <h3 className="font-bold text-brand-text mb-1">Parent-Friendly Note</h3>
               <p className="text-sm text-brand-muted leading-relaxed">
-                For questions, suggestions, or collaboration, please contact us with parent or guardian permission. Because this website is for children and teens, we do not have an open public chat system to ensure everyone's safety.
+                Children should contact only with parent or guardian permission. Please do not share passwords, account details, home address, phone number, school name, or private information.
               </p>
             </div>
           </div>
@@ -60,6 +60,9 @@ const Contact = () => {
               <Send className="w-5 h-5" />
               Send Message
             </button>
+            <p className="text-xs text-brand-muted/70 text-center mt-4 italic">
+              This form is currently a front-end demo. A secure contact system can be connected later.
+            </p>
           </form>
 
         </div>

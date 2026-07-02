@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0B1020"/>
+
+  <!-- Glowing blobs -->
+  <circle cx="200" cy="150" r="300" fill="#38BDF8" opacity="0.15" filter="blur(80px)"/>
+  <circle cx="1000" cy="500" r="300" fill="#8B5CF6" opacity="0.15" filter="blur(80px)"/>
+  <circle cx="600" cy="700" r="400" fill="#22C55E" opacity="0.1" filter="blur(100px)"/>
+
+  <!-- Content Container -->
+  <g transform="translate(150, 150)">
+    <!-- Logo Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="160" rx="80" fill="#111827" stroke="#38BDF8" stroke-width="4"/>
+
+      <!-- Inner Glow -->
+      <circle cx="80" cy="80" r="76" fill="url(#grad1)" opacity="0.5"/>
+
+      <!-- Controller Icon (Simplified Gamepad2) -->
+      <path d="M40 80 Q 40 55 80 55 Q 120 55 120 80 L 128 105 Q 131 115 120 115 L 105 115 Q 95 115 92 105 L 88 88 L 72 88 L 68 105 Q 65 115 55 115 L 40 115 Q 29 115 32 105 Z" fill="none" stroke="#38BDF8" stroke-width="8" stroke-linejoin="round"/>
+
+      <!-- D-pad -->
+      <rect x="52" y="72" width="6" height="20" fill="#38BDF8"/>
+      <rect x="45" y="79" width="20" height="6" fill="#38BDF8"/>
+
+      <!-- Buttons -->
+      <circle cx="100" cy="75" r="5" fill="#22C55E"/>
+      <circle cx="110" cy="85" r="5" fill="#FACC15"/>
+
+      <!-- Pixel Stars -->
+      <rect x="140" y="20" width="8" height="8" fill="#FACC15"/>
+      <rect x="10" y="130" width="6" height="6" fill="#22C55E"/>
+      <rect x="150" y="90" width="5" height="5" fill="#8B5CF6"/>
+    </g>
+
+    <!-- Text Content -->
+    <g transform="translate(200, 40)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#F8FAFC" dominant-baseline="hanging">
+        Tips &amp; Tricks
+      </text>
+      <text x="0" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#38BDF8" letter-spacing="4" dominant-baseline="hanging">
+        BY MASTER HAMMAD
+      </text>
+      <text x="0" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#CBD5E1" dominant-baseline="hanging">
+        Gaming Tips for Kids &amp; Teens
+      </text>
+    </g>
+  </g>
+
+  <!-- Decorative Elements -->
+  <g transform="translate(0, 0)">
+    <rect x="100" y="500" width="20" height="20" fill="#38BDF8" opacity="0.5"/>
+    <rect x="1100" y="100" width="15" height="15" fill="#FACC15" opacity="0.5"/>
+    <rect x="900" y="550" width="25" height="25" fill="#8B5CF6" opacity="0.5"/>
+    <rect x="50" y="50" width="10" height="10" fill="#22C55E" opacity="0.5"/>
+  </g>
+
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

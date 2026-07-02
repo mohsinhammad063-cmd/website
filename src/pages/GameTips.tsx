@@ -1,47 +1,78 @@
-import TipCard from '../components/TipCard';
+import { Link } from 'react-router-dom';
+import { BookOpen, ArrowRight } from 'lucide-react';
 
 const tips = [
   {
     title: "Top 10 Minecraft Tips for Beginners",
     description: "Learn how to survive your first night, find food, and build a safe shelter in Minecraft.",
-    category: "Minecraft",
+    game: "Minecraft",
     difficulty: "Beginner" as const,
-    readTime: "5 min"
+    ageBadge: "8-15",
+    readTime: "5 min",
+    slug: "top-10-minecraft-tips-for-beginners"
   },
   {
     title: "How to Get Better at Roblox Obby Games",
     description: "Master jumps, avoid common traps, and complete difficult obstacle courses with these simple tricks.",
-    category: "Roblox",
+    game: "Roblox",
     difficulty: "Medium" as const,
-    readTime: "4 min"
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-get-better-at-roblox-obby-games"
   },
   {
     title: "Best Settings for Smooth Gameplay",
-    description: "Adjust your graphics, sensitivity, and audio settings to make your games run perfectly and feel better.",
-    category: "General",
+    description: "Learn how to adjust your graphics and controls so your game runs faster and feels better to play.",
+    game: "General",
     difficulty: "Easy" as const,
-    readTime: "3 min"
+    ageBadge: "8-15",
+    readTime: "3 min",
+    slug: "best-settings-for-smooth-gameplay"
   },
   {
     title: "How to Practice Without Getting Frustrated",
-    description: "Learning new skills takes time. Discover ways to stay calm, have fun, and improve steadily.",
-    category: "Mindset",
+    description: "Tips on taking breaks, setting small goals, and staying calm when learning a new game.",
+    game: "General",
     difficulty: "Beginner" as const,
-    readTime: "6 min"
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-practice-without-getting-frustrated"
   },
   {
     title: "Simple Tips to Win More Racing Games",
-    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car for the track.",
-    category: "Racing Games",
+    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car.",
+    game: "Racing",
     difficulty: "Medium" as const,
-    readTime: "4 min"
+    ageBadge: "8-15",
+    readTime: "3 min",
+    slug: "simple-tips-to-win-more-racing-games"
   },
   {
     title: "How to Build Better in Minecraft",
-    description: "Make your houses look amazing with these simple design tricks, using depth, texture, and good lighting.",
-    category: "Minecraft",
+    description: "Move beyond dirt huts and learn how to use different blocks and shapes for cooler houses.",
+    game: "Minecraft",
     difficulty: "Medium" as const,
-    readTime: "7 min"
+    ageBadge: "8-15",
+    readTime: "6 min",
+    slug: "how-to-build-better-in-minecraft"
+  },
+  {
+    title: "How to Stay Safe While Playing Online Games",
+    description: "Important rules for chatting, making friends, and protecting your personal information.",
+    game: "Safety",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "5 min",
+    slug: "how-to-stay-safe-while-playing-online-games"
+  },
+  {
+    title: "How to Avoid Scams in Online Games",
+    description: "Learn how to spot fake offers for free coins and items to keep your account safe.",
+    game: "Safety",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-avoid-scams-in-online-games"
   }
 ];
 
@@ -68,7 +99,36 @@ const GameTips = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tips.map((tip, index) => (
-            <TipCard key={index} {...tip} />
+            <div key={index} className="glass-card overflow-hidden flex flex-col h-full border-brand-primary/20 hover:border-brand-primary/50 hover-lift group">
+              <div className="p-6 flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <span className="px-3 py-1 text-xs font-bold rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20">
+                    {tip.game}
+                  </span>
+                  <div className="flex gap-2">
+                     <span className={`px-2 py-1 text-xs font-bold rounded-md border
+                        ${tip.difficulty === 'Beginner' ? 'bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20' :
+                          tip.difficulty === 'Easy' ? 'bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20' :
+                          'bg-brand-cta/10 text-brand-cta border-brand-cta/20'}`}>
+                       {tip.difficulty}
+                     </span>
+                     <span className="px-2 py-1 text-xs font-bold rounded-md bg-brand-purple/10 text-brand-purple border border-brand-purple/20">
+                       {tip.ageBadge}
+                     </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-brand-text mb-3 group-hover:text-brand-primary transition-colors">{tip.title}</h3>
+                <p className="text-brand-muted text-sm leading-relaxed mb-4">{tip.description}</p>
+                <div className="flex items-center text-xs text-brand-muted/70 gap-4 mt-auto">
+                  <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" /> {tip.readTime}</span>
+                </div>
+              </div>
+              <div className="border-t border-brand-primary/10 p-4 bg-brand-bg/30 group-hover:bg-brand-primary/5 transition-colors">
+                <Link to={`/tips/${tip.slug}`} className="text-brand-primary font-medium text-sm flex items-center justify-between w-full">
+                  Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </div>
