@@ -1,10 +1,12 @@
 import TipCard from '../components/TipCard';
 import { articles } from '../data/articles';
+import SEO from '../components/SEO';
 
 const GameTips = () => {
   const tips = articles.filter(article => article.type === 'tip');
   return (
     <div className="py-12 md:py-20">
+      <SEO title="Game Tips | Tips & Tricks by Master Hammad" description="Explore our collection of simple, helpful tips to make you a better player." />
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-4">

@@ -9,10 +9,11 @@ export interface CategoryCardProps {
 }
 
 const CategoryCard = ({ title, icon: Icon, path, colorClass }: CategoryCardProps) => {
+  const safePath = path === "/" ? "/game-tips" : path;
   return (
     <Link
-      to={path}
-      className={`glass-card p-6 flex flex-col items-center justify-center text-center gap-4 hover-lift group border-transparent hover:border-${colorClass}/30 transition-all duration-300`}
+      to={safePath}
+      className={`glass-card p-6 flex flex-col items-center justify-center text-center gap-4 hover-lift group border-transparent hover:border-${colorClass}/30 transition-all duration-300 w-full md:w-auto`}
     >
       <div className={`p-4 rounded-full bg-brand-bg shadow-inner border border-${colorClass}/20 group-hover:scale-110 transition-transform duration-300`}>
         <Icon className={`w-8 h-8 text-${colorClass} drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />

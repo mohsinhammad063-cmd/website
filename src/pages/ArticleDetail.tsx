@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, Shield, Gamepad2, AlertCircle, ChevronLeft, ChevronRight, Hash } from 'lucide-react';
 import { articles } from '../data/articles';
+import SEO from '../components/SEO';
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -9,21 +9,10 @@ const ArticleDetail = () => {
   // Find article from both tips and guides based on slug
   const article = articles.find((a) => a.slug === slug);
 
-  useEffect(() => {
-    if (article) {
-      document.title = `${article.title} | Master Hammad`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', article.description);
-      }
-    } else {
-      document.title = 'Article Not Found | Master Hammad';
-    }
-  }, [article]);
-
   if (!article) {
     return (
       <div className="py-20 flex flex-col items-center justify-center text-center px-4 min-h-[60vh]">
+        <SEO title="Article Not Found | Tips & Tricks by Master Hammad" description="The requested article could not be found." />
         <div className="w-24 h-24 rounded-full bg-brand-primary/10 flex items-center justify-center mb-6 border border-brand-primary/20">
           <AlertCircle className="w-12 h-12 text-brand-primary" />
         </div>
@@ -50,6 +39,7 @@ const ArticleDetail = () => {
 
   return (
     <div className="py-12 md:py-20">
+      <SEO title={`${article.title} | Tips & Tricks by Master Hammad`} description={article.description} />
       <div className="container mx-auto px-4 md:px-6">
 
         {/* Back Button */}

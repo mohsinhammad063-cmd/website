@@ -1,8 +1,10 @@
 import { ShieldAlert, Send } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   return (
     <div className="py-12 md:py-20">
+      <SEO title="Contact Us | Tips & Tricks by Master Hammad" description="Get in touch with Master Hammad for questions, suggestions, or feedback." />
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-2xl mx-auto">
 

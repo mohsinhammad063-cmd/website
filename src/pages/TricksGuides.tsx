@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Crosshair, Search, Coins, Target, UserCheck, Gamepad2, AlertCircle } from 'lucide-react';
 import { articles } from '../data/articles';
+import SEO from '../components/SEO';
 
 const iconMap: Record<string, any> = {
   "how-to-find-hidden-game-secrets": Search,
@@ -24,6 +25,7 @@ const TricksGuides = () => {
   const guides = articles.filter(article => article.type === 'guide');
   return (
     <div className="py-12 md:py-20 relative overflow-hidden">
+      <SEO title="Tricks & Guides | Tips & Tricks by Master Hammad" description="In-depth game guides to help you master your favorite games, improve your aim, and practice better." />
       {/* Background decoration */}
       <div className="absolute top-40 right-10 w-96 h-96 bg-brand-purple/10 rounded-full mix-blend-screen filter blur-3xl opacity-50"></div>
 

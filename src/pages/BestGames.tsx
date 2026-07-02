@@ -1,4 +1,5 @@
 import GameCard from '../components/GameCard';
+import SEO from '../components/SEO';
 
 const categories = [
   {
@@ -42,6 +43,7 @@ const categories = [
 const BestGames = () => {
   return (
     <div className="py-12 md:py-20">
+      <SEO title="Best Games for Kids | Tips & Tricks by Master Hammad" description="Discover the best family-friendly and safe games for kids and young teens." />
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-4">

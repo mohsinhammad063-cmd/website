@@ -6,180 +6,66 @@ export interface ArticleSection {
 export interface Article {
   id: string;
   slug: string;
-  type: 'tip' | 'guide';
+  type?: string;
   title: string;
   category: string;
   game?: string;
-  difficulty: 'Beginner' | 'Easy' | 'Medium' | 'Hard';
+  difficulty: string;
   ageRange: string;
   readTime: string;
   description: string;
-  heroText?: string;
+  image: string;
   sections: ArticleSection[];
   tips: string[];
-  safetyNote?: string;
-  relatedArticles?: string[];
+  safetyNote: string;
 }
 
 export const articles: Article[] = [
   // Tips
   {
-    id: "minecraft-beginners",
+    id: "minecraft-top-10",
     slug: "top-10-minecraft-tips-for-beginners",
     type: "tip",
     title: "Top 10 Minecraft Tips for Beginners",
     category: "Minecraft",
     game: "Minecraft",
     difficulty: "Beginner",
-    ageRange: "8–15",
+    ageRange: "8+",
     readTime: "5 min read",
-    description: "Learn how to survive your first night, find food, and build a safe shelter in Minecraft.",
-    sections: [
-      {
-        heading: "Start with a small safe house",
-        body: "Before exploring too far, build a small house with a door, torches, and a bed. This helps you stay safe at night."
-      },
-      {
-         heading: "Don't dig straight down",
-         body: "Digging straight down is the number one way to fall into lava or a deep cave. Always dig in a staircase pattern."
-      }
-    ],
-    tips: [
-      "Collect wood first.",
-      "Build a small shelter.",
-      "Make basic tools.",
-      "Use torches to stop dark areas.",
-      "Keep food ready.",
-      "Do not dig straight down.",
-      "Learn crafting recipes.",
-      "Use creative mode for practice.",
-      "Keep important items safe.",
-      "Take breaks."
-    ],
-    safetyNote: "Always take breaks and ask a parent before joining online servers."
-  },
-  {
-    id: "roblox-obby",
-    slug: "how-to-get-better-at-roblox-obby-games",
-    type: "tip",
-    title: "How to Get Better at Roblox Obby Games",
-    category: "Roblox",
-    game: "Roblox",
-    difficulty: "Medium",
-    ageRange: "8–15",
-    readTime: "4 min read",
-    description: "Master jumps, avoid common traps, and complete difficult obstacle courses with these simple tricks.",
+    description: "Learn the most important things to do on your first day in Minecraft, from getting wood to surviving the first night.",
+    image: "/images/minecraft-style-blocks.svg",
     sections: [
        {
-           heading: "Practice your jumps",
-           body: "Jumping is the most important skill. Practice timing your jumps and landing exactly where you want to."
+           heading: "Punch Trees",
+           body: "The very first thing you need to do is punch a tree to get wood. Wood is the foundation of everything in Minecraft."
        },
        {
-           heading: "Use camera angles",
-           body: "Move your camera around to see better. Sometimes an impossible jump is easy if you look at it from above."
+           heading: "Make a Crafting Table",
+           body: "Use 4 wooden planks to make a crafting table. This allows you to build more complex items like tools and beds."
        }
     ],
     tips: [
-      "Start with easy obbies.",
-      "Practice jumping.",
-      "Watch platform timing.",
-      "Do not rush.",
-      "Use camera angles.",
-      "Stay calm after falling.",
-      "Avoid fake reward scams.",
-      "Ask parents before buying Robux."
+      "Always carry food.",
+      "Don't dig straight down.",
+      "Build a bed quickly.",
+      "Light up your base.",
+      "Use stone tools.",
+      "Listen for monsters."
     ],
-    safetyNote: "Never share your password or trust free Robux scams."
-  },
-  {
-    id: "best-settings",
-    slug: "best-settings-for-smooth-gameplay",
-    type: "tip",
-    title: "Best Settings for Smooth Gameplay",
-    category: "General",
-    difficulty: "Easy",
-    ageRange: "8+",
-    readTime: "3 min read",
-    description: "Adjust your graphics, sensitivity, and audio settings to make your games run perfectly and feel better.",
-    sections: [
-       {
-           heading: "Lower Graphics for Speed",
-           body: "If your game is lagging, the easiest fix is to lower your graphics settings. Turn off shadows and lower the resolution."
-       }
-    ],
-    tips: [
-      "Lower graphics if game lags.",
-      "Close extra apps.",
-      "Use stable internet.",
-      "Adjust sensitivity.",
-      "Keep device charged.",
-      "Ask parents before installing boosters or tools."
-    ],
-    safetyNote: "Only download games and tools from official app stores."
-  },
-  {
-    id: "practice-mindset",
-    slug: "how-to-practice-without-getting-frustrated",
-    type: "tip",
-    title: "How to Practice Without Getting Frustrated",
-    category: "Mindset",
-    difficulty: "Beginner",
-    ageRange: "8+",
-    readTime: "6 min read",
-    description: "Learning new skills takes time. Discover ways to stay calm, have fun, and improve steadily.",
-    sections: [
-        {
-            heading: "Take frequent breaks",
-            body: "If you feel yourself getting angry, stop playing. A 5-minute break can completely reset your mood."
-        }
-    ],
-    tips: [
-      "Practice 10 minutes at a time.",
-      "Try easier levels first.",
-      "Learn from mistakes.",
-      "Take breaks.",
-      "Do not compare with pro players.",
-      "Keep gaming fun."
-    ],
-    safetyNote: "Remember that games are supposed to be fun. If you aren't having fun, it's time to stop."
-  },
-  {
-    id: "racing-tips",
-    slug: "simple-tips-to-win-more-racing-games",
-    type: "tip",
-    title: "Simple Tips to Win More Racing Games",
-    category: "Racing Games",
-    difficulty: "Medium",
-    ageRange: "8+",
-    readTime: "4 min read",
-    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car for the track.",
-    sections: [
-       {
-           heading: "Learn the track",
-           body: "Knowing the track is half the battle. If you know a sharp turn is coming, you can prepare for it."
-       }
-    ],
-    tips: [
-      "Learn the track.",
-      "Brake before turns.",
-      "Avoid crashing.",
-      "Practice cornering.",
-      "Upgrade carefully.",
-      "Stay calm near the finish."
-    ],
-    safetyNote: "Take breaks to stretch your hands and eyes."
+    safetyNote: "Remember to take screen breaks every hour!"
   },
   {
     id: "build-better-minecraft",
-    slug: "how-to-build-better-in-minecraft",
+    slug: "how-to-build-better-houses-in-minecraft",
     type: "tip",
-    title: "How to Build Better in Minecraft",
+    title: "How to Build Better Houses in Minecraft",
     category: "Minecraft",
     game: "Minecraft",
     difficulty: "Medium",
     ageRange: "8+",
     readTime: "7 min read",
     description: "Make your houses look amazing with these simple design tricks, using depth, texture, and good lighting.",
+    image: "/images/minecraft-style-blocks.svg",
     sections: [
        {
            heading: "Add Depth",
@@ -197,42 +83,141 @@ export const articles: Article[] = [
     safetyNote: "Take regular breaks to rest your eyes."
   },
   {
-    id: "online-safety",
-    slug: "how-to-stay-safe-while-playing-online-games",
+    id: "minecraft-survival",
+    slug: "minecraft-survival-tips-for-new-players",
     type: "tip",
-    title: "How to Stay Safe While Playing Online Games",
-    category: "Safety",
+    title: "Minecraft Survival Tips for New Players",
+    category: "Minecraft",
+    game: "Minecraft",
     difficulty: "Beginner",
     ageRange: "8+",
-    readTime: "5 min read",
-    description: "Important rules for young gamers to stay safe, keep accounts secure, and avoid bad experiences online.",
+    readTime: "6 min read",
+    description: "How to find food, avoid dying, and keep your items safe when playing survival mode.",
+    image: "/images/minecraft-style-blocks.svg",
     sections: [
        {
-           heading: "Protect your personal info",
-           body: "Never tell anyone your real name, where you live, or what school you go to."
+           heading: "Find Food Early",
+           body: "Killing animals or farming wheat is essential. You cannot heal if your hunger bar is empty."
        }
     ],
     tips: [
-      "Never share personal info.",
-      "Do not share passwords.",
-      "Avoid private chats with strangers.",
-      "Tell parents about bad messages.",
-      "Ask before downloading.",
-      "Use strong passwords.",
-      "Take screen breaks."
+      "Cook your meat.",
+      "Make a shield.",
+      "Always carry water.",
+      "Sleep through the night."
     ],
-    safetyNote: "Always talk to a parent if someone makes you feel uncomfortable online."
+    safetyNote: "If the game is too scary, you can always play in Peaceful mode."
+  },
+  {
+    id: "minecraft-creative",
+    slug: "best-creative-mode-ideas-for-kids",
+    type: "tip",
+    title: "Best Creative Mode Ideas for Kids",
+    category: "Minecraft",
+    game: "Minecraft",
+    difficulty: "Easy",
+    ageRange: "8+",
+    readTime: "4 min read",
+    description: "Fun and easy things to build when you have infinite blocks and can fly.",
+    image: "/images/minecraft-style-blocks.svg",
+    sections: [
+       {
+           heading: "Build a Rollercoaster",
+           body: "Use rails and powered rails to make a fun ride around your world."
+       }
+    ],
+    tips: [
+      "Try pixel art.",
+      "Build a giant treehouse.",
+      "Make an underwater base."
+    ],
+    safetyNote: "Creative mode is a great way to relax."
+  },
+  {
+    id: "roblox-obby",
+    slug: "how-to-get-better-at-roblox-obby-games",
+    type: "tip",
+    title: "How to Get Better at Roblox Obby Games",
+    category: "Roblox",
+    game: "Roblox",
+    difficulty: "Medium",
+    ageRange: "8+",
+    readTime: "5 min read",
+    description: "Timing your jumps and turning the camera are key to beating difficult obstacle courses.",
+    image: "/images/roblox-style-obstacle.svg",
+    sections: [
+       {
+           heading: "Use Shift Lock",
+           body: "If playing on PC, use shift lock to make your camera follow your mouse. It helps with precise jumping."
+       }
+    ],
+    tips: [
+      "Take your time.",
+      "Watch the patterns.",
+      "Adjust your camera."
+    ],
+    safetyNote: "Obbies can be frustrating. Take a break if you get mad."
+  },
+  {
+    id: "roblox-safety",
+    slug: "roblox-safety-tips-for-young-players",
+    type: "tip",
+    title: "Roblox Safety Tips for Young Players",
+    category: "Safety",
+    game: "Roblox",
+    difficulty: "Beginner",
+    ageRange: "8+",
+    readTime: "5 min read",
+    description: "How to keep your account safe and what to do if someone is being mean in chat.",
+    image: "/images/safe-gaming-shield.svg",
+    sections: [
+       {
+           heading: "Never Share Passwords",
+           body: "Not even with your best friend. Only your parents should know your password."
+       }
+    ],
+    tips: [
+      "Don't click free Robux links.",
+      "Report bad players.",
+      "Play with friends you know in real life."
+    ],
+    safetyNote: "Always tell a parent if someone online makes you uncomfortable."
+  },
+  {
+    id: "roblox-choose-games",
+    slug: "how-to-choose-good-roblox-games",
+    type: "tip",
+    title: "How to Choose Good Roblox Games",
+    category: "Roblox",
+    game: "Roblox",
+    difficulty: "Easy",
+    ageRange: "8+",
+    readTime: "4 min read",
+    description: "With millions of games, how do you find the fun, safe ones and avoid the scams?",
+    image: "/images/roblox-style-obstacle.svg",
+    sections: [
+       {
+           heading: "Check the Likes",
+           body: "Games with a lot of likes compared to dislikes are usually good."
+       }
+    ],
+    tips: [
+      "Read the description.",
+      "Avoid games promising free items."
+    ],
+    safetyNote: "Some games might be too scary. Check with parents."
   },
   {
     id: "avoid-scams",
-    slug: "how-to-avoid-scams-in-online-games",
+    slug: "how-to-avoid-fake-rewards-and-scams",
     type: "tip",
-    title: "How to Avoid Scams in Online Games",
+    title: "How to Avoid Fake Rewards and Scams",
     category: "Safety",
     difficulty: "Beginner",
     ageRange: "8+",
     readTime: "4 min read",
     description: "Learn how to spot fake offers, keep your items safe in trades, and protect your account from hackers.",
+    image: "/images/safe-gaming-shield.svg",
     sections: [
        {
            heading: "Free Currency Scams",
@@ -250,46 +235,43 @@ export const articles: Article[] = [
     ],
     safetyNote: "Never share your password, not even with friends."
   },
-  // Guides
   {
-    id: "hidden-secrets",
-    slug: "how-to-find-hidden-game-secrets",
-    type: "guide",
-    title: "How to Find Hidden Game Secrets",
-    category: "Exploration",
+    id: "fortnite-tips",
+    slug: "fortnite-beginner-tips-for-better-practice",
+    type: "tip",
+    title: "Fortnite Beginner Tips for Better Practice",
+    category: "Action",
+    game: "Fortnite",
     difficulty: "Medium",
-    ageRange: "8+",
-    readTime: "5 min read",
-    description: "Look behind waterfalls, check suspicious walls, and explore every corner of the map. Developers love hiding special items!",
+    ageRange: "10+",
+    readTime: "6 min read",
+    description: "Stop dropping in crowded areas. Learn the basics of gathering materials and simple building first.",
+    image: "/images/aim-training.svg",
     sections: [
        {
-           heading: "Check the edges",
-           body: "Game developers often hide things on the very edge of the map, or just out of normal sight."
-       },
-       {
-           heading: "Listen for audio cues",
-           body: "Sometimes a hidden item will make a quiet humming or sparkling sound. Turn up your volume!"
+           heading: "Land Quietly",
+           body: "Choose a spot far from the battle bus path to gather weapons safely before fighting."
        }
     ],
     tips: [
-      "Check behind waterfalls.",
-      "Look for odd textures on walls.",
-      "Listen for strange sounds.",
-      "Explore off the main path.",
-      "Read in-game notes for clues."
+      "Gather materials constantly.",
+      "Use headphones.",
+      "Practice in Creative mode."
     ],
-    safetyNote: "Remember to take breaks while exploring."
+    safetyNote: "Competitive games can be stressful. Remember to breathe!"
   },
+  // Guides
   {
     id: "improve-aim",
-    slug: "how-to-improve-your-aim",
+    slug: "how-to-improve-your-aim-in-games",
     type: "guide",
-    title: "How to Improve Your Aim",
+    title: "How to Improve Your Aim in Games",
     category: "Skills",
     difficulty: "Medium",
     ageRange: "10+",
     readTime: "6 min read",
     description: "Lower your sensitivity slightly. It might feel slow at first, but it makes tracking moving targets much easier and more consistent.",
+    image: "/images/aim-training.svg",
     sections: [
        {
            heading: "Find the right sensitivity",
@@ -310,32 +292,55 @@ export const articles: Article[] = [
     safetyNote: "Don't get frustrated. Aim takes a long time to improve."
   },
   {
-    id: "save-coins",
-    slug: "how-to-save-coins-and-rewards",
+    id: "best-settings",
+    slug: "best-settings-for-smooth-gameplay",
     type: "guide",
-    title: "How to Save Coins and Rewards",
-    category: "Management",
-    difficulty: "Beginner",
+    title: "Best Settings for Smooth Gameplay",
+    category: "Settings",
+    difficulty: "Easy",
     ageRange: "8+",
     readTime: "4 min read",
-    description: "Don't spend in-game money on the first item you see. Save up for items that give you permanent upgrades or special abilities.",
+    description: "Turn down shadows and effects to make your game run faster and smoother.",
+    image: "/images/controller-badge.svg",
     sections: [
        {
-           heading: "Set a goal",
-           body: "Decide what expensive item you really want, and only buy that."
-       },
-       {
-           heading: "Avoid cosmetics at first",
-           body: "Skins are cool, but upgrades that help you win are better to buy first."
+           heading: "Turn off V-Sync",
+           body: "Sometimes V-sync can cause input delay. Try turning it off if your game feels laggy."
        }
     ],
     tips: [
-      "Don't buy the first thing you see.",
-      "Save for permanent upgrades.",
-      "Complete daily quests for more coins.",
-      "Ignore cosmetics until later."
+      "Lower shadows.",
+      "Update drivers.",
+      "Close other apps."
     ],
-    safetyNote: "Never use real money without asking a parent."
+    safetyNote: "If changing settings makes the screen go black, don't panic. Ask an adult for help."
+  },
+  {
+    id: "racing-tips",
+    slug: "simple-tips-to-win-more-racing-games",
+    type: "guide",
+    title: "Simple Tips to Win More Racing Games",
+    category: "Racing Games",
+    difficulty: "Medium",
+    ageRange: "8+",
+    readTime: "4 min read",
+    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car for the track.",
+    image: "/images/racing-track.svg",
+    sections: [
+       {
+           heading: "Learn the track",
+           body: "Knowing the track is half the battle. If you know a sharp turn is coming, you can prepare for it."
+       }
+    ],
+    tips: [
+      "Learn the track.",
+      "Brake before turns.",
+      "Avoid crashing.",
+      "Practice cornering.",
+      "Upgrade carefully.",
+      "Stay calm near the finish."
+    ],
+    safetyNote: "Take breaks to stretch your hands and eyes."
   },
   {
     id: "difficult-levels",
@@ -347,6 +352,7 @@ export const articles: Article[] = [
     ageRange: "8+",
     readTime: "5 min read",
     description: "If you're stuck, take a 5-minute break. Sometimes your brain just needs a rest to see the solution clearly when you return.",
+    image: "/images/trophy-tips.svg",
     sections: [
        {
            heading: "Analyze the level",
@@ -366,6 +372,35 @@ export const articles: Article[] = [
     safetyNote: "If you get angry, it's time to stop playing."
   },
   {
+    id: "save-coins",
+    slug: "how-to-save-coins-and-rewards",
+    type: "guide",
+    title: "How to Save Coins and Rewards",
+    category: "Management",
+    difficulty: "Beginner",
+    ageRange: "8+",
+    readTime: "4 min read",
+    description: "Don't spend in-game money on the first item you see. Save up for items that give you permanent upgrades or special abilities.",
+    image: "/images/coins-rewards.svg",
+    sections: [
+       {
+           heading: "Set a goal",
+           body: "Decide what expensive item you really want, and only buy that."
+       },
+       {
+           heading: "Avoid cosmetics at first",
+           body: "Skins are cool, but upgrades that help you win are better to buy first."
+       }
+    ],
+    tips: [
+      "Don't buy the first thing you see.",
+      "Save for permanent upgrades.",
+      "Complete daily quests for more coins.",
+      "Ignore cosmetics until later."
+    ],
+    safetyNote: "Never use real money without asking a parent."
+  },
+  {
     id: "choose-character",
     slug: "how-to-choose-the-right-character",
     type: "guide",
@@ -375,6 +410,7 @@ export const articles: Article[] = [
     ageRange: "8+",
     readTime: "4 min read",
     description: "Pick characters that match your playstyle. If you like to rush in, choose high-health characters. If you prefer to stay back, choose ranged characters.",
+    image: "/images/beginner-map.svg",
     sections: [
        {
            heading: "Know your playstyle",
@@ -402,6 +438,7 @@ export const articles: Article[] = [
     ageRange: "8+",
     readTime: "5 min read",
     description: "Gaming should be fun. Learn how to manage your emotions and stay positive even when you are losing.",
+    image: "/images/controller-badge.svg",
     sections: [
        {
            heading: "Recognize the signs",
@@ -420,5 +457,100 @@ export const articles: Article[] = [
       "Play something relaxing instead."
     ],
     safetyNote: "If you feel like breaking something, turn off the game immediately."
+  },
+  {
+    id: "safe-online-rules",
+    slug: "safe-online-gaming-rules-for-kids",
+    type: "guide",
+    title: "Safe Online Gaming Rules for Kids",
+    category: "Safety",
+    difficulty: "Beginner",
+    ageRange: "8+",
+    readTime: "5 min read",
+    description: "Simple rules to remember every time you log on to play with others.",
+    image: "/images/safe-gaming-shield.svg",
+    sections: [
+       {
+           heading: "Keep info private",
+           body: "Never share real names, addresses, or phone numbers."
+       }
+    ],
+    tips: [
+      "Use a nickname.",
+      "Be kind.",
+      "Report bullies."
+    ],
+    safetyNote: "Gaming is safer when parents know what you play."
+  },
+  {
+    id: "best-games",
+    slug: "best-games-for-kids-age-8-15",
+    type: "guide",
+    title: "Best Games for Kids Age 8–15",
+    category: "Family Games",
+    difficulty: "Easy",
+    ageRange: "8+",
+    readTime: "8 min read",
+    description: "A list of fun, safe, and challenging games that are perfect for young teens and kids.",
+    image: "/images/family-games.svg",
+    sections: [
+       {
+           heading: "Minecraft",
+           body: "The ultimate creative game. Great for all ages."
+       }
+    ],
+    tips: [
+      "Try puzzle games.",
+      "Play co-op with family."
+    ],
+    safetyNote: "Always check age ratings before buying a game."
+  },
+  {
+    id: "gaming-breaks",
+    slug: "how-to-take-gaming-breaks",
+    type: "guide",
+    title: "How to Take Gaming Breaks",
+    category: "Mindset",
+    difficulty: "Beginner",
+    ageRange: "8+",
+    readTime: "3 min read",
+    description: "Why you need breaks and how to remember to take them.",
+    image: "/images/controller-badge.svg",
+    sections: [
+       {
+           heading: "The 20-20-20 Rule",
+           body: "Every 20 minutes, look at something 20 feet away for 20 seconds."
+       }
+    ],
+    tips: [
+      "Set an alarm.",
+      "Stretch your legs.",
+      "Get a snack."
+    ],
+    safetyNote: "Your eyes need rest to stay healthy."
+  },
+  {
+    id: "balance-gaming",
+    slug: "how-to-balance-gaming-and-study",
+    type: "guide",
+    title: "How to Balance Gaming and Study",
+    category: "Mindset",
+    difficulty: "Medium",
+    ageRange: "10+",
+    readTime: "6 min read",
+    description: "How to make sure you get good grades and still have time to game.",
+    image: "/images/trophy-tips.svg",
+    sections: [
+       {
+           heading: "Homework First",
+           body: "Always finish homework before turning on the console. It makes gaming feel like a reward."
+       }
+    ],
+    tips: [
+      "Make a schedule.",
+      "Use gaming as a reward.",
+      "Don't game late at night."
+    ],
+    safetyNote: "Sleep is more important than gaming!"
   }
 ];

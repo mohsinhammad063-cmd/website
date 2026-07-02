@@ -1,8 +1,10 @@
 import { Shield, EyeOff, Lock } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => {
   return (
     <div className="py-12 md:py-20">
+      <SEO title="Privacy Policy | Tips & Tricks by Master Hammad" description="Read our privacy policy to learn how we protect your information." />
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
 

@@ -4,15 +4,16 @@ import { Clock, BarChart, ChevronRight } from 'lucide-react';
 export interface TipCardProps {
   id?: string;
   slug?: string;
-  type?: 'tip' | 'guide';
+  type?: string;
   title: string;
   description: string;
   category: string;
-  difficulty: 'Beginner' | 'Easy' | 'Medium' | 'Hard';
+  difficulty: string;
   readTime: string;
+  image?: string;
 }
 
-const TipCard = ({ slug, type = 'tip', title, description, category, difficulty, readTime }: TipCardProps) => {
+const TipCard = ({ slug, type = 'tip', title, description, category, difficulty, readTime, image }: TipCardProps) => {
   const getDifficultyColor = () => {
     switch (difficulty) {
       case 'Beginner':
@@ -27,7 +28,13 @@ const TipCard = ({ slug, type = 'tip', title, description, category, difficulty,
   };
 
   return (
-    <div className="glass-card p-6 flex flex-col h-full hover-lift group border-brand-primary/10 hover:border-brand-primary/40">
+    <div className="glass-card flex flex-col h-full hover-lift group border-brand-primary/10 hover:border-brand-primary/40 overflow-hidden">
+      {image && (
+        <div className="h-40 w-full overflow-hidden bg-brand-bg/50">
+          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+      )}
+      <div className="p-6 flex flex-col flex-grow">
       <div className="flex justify-between items-start mb-4 gap-2">
         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-brand-purple/20 text-brand-purple border border-brand-purple/30">
           {category}
@@ -59,6 +66,7 @@ const TipCard = ({ slug, type = 'tip', title, description, category, difficulty,
           Read more
           <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
+      </div>
       </div>
     </div>
   );

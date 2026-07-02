@@ -1,8 +1,10 @@
 import { CheckCircle2, Gamepad2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <div className="py-12 md:py-20 relative overflow-hidden">
+      <SEO title="About Us | Tips & Tricks by Master Hammad" description="Learn about Master Hammad and our mission to provide safe, helpful gaming tips for kids and teens." />
       {/* Background decorations */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-brand-primary/10 rounded-full mix-blend-screen filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-64 h-64 bg-brand-secondary/10 rounded-full mix-blend-screen filter blur-3xl"></div>

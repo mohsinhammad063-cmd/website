@@ -12,7 +12,7 @@ const GameCard = ({ title, category, description, isPopular }: GameCardProps) =>
   return (
     <Link
       to="/best-games"
-      className="glass-card p-5 group hover-lift flex flex-col relative overflow-hidden border-brand-secondary/10 hover:border-brand-secondary/40"
+      className="glass-card p-5 group hover-lift flex flex-col relative overflow-hidden border-brand-secondary/10 hover:border-brand-secondary/40 w-full md:w-auto"
     >
       {isPopular && (
         <div className="absolute top-0 right-0 bg-brand-cta text-brand-bg text-[10px] font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl flex items-center gap-1 z-10 shadow-[0_0_10px_rgba(250,204,21,0.5)]">

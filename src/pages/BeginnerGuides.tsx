@@ -1,5 +1,6 @@
 import { Gamepad, Search, BookOpen, Target, Coffee, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const steps = [
   {
@@ -43,6 +44,7 @@ const steps = [
 const BeginnerGuides = () => {
   return (
     <div className="py-12 md:py-20">
+      <SEO title="Beginner Guides | Tips & Tricks by Master Hammad" description="Step-by-step gaming guides for beginners and new players to learn the basics safely." />
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-4">

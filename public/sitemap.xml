@@ -2,112 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hammad-s-guide.web.app/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/game-tips</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tricks-guides</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/best-games</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/beginner-guides</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/safe-gaming</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/best-games</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/minecraft-tips</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/roblox-tips</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/fortnite-tips</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/racing-game-tips</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/best-games-for-kids</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/shop</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources</loc>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/coming-soon</loc>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/top-10-minecraft-tips-for-beginners</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-build-better-houses-in-minecraft</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/minecraft-survival-tips-for-new-players</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/tips/best-creative-mode-ideas-for-kids</loc>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/how-to-get-better-at-roblox-obby-games</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/best-settings-for-smooth-gameplay</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/tips/roblox-safety-tips-for-young-players</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/how-to-practice-without-getting-frustrated</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-choose-good-roblox-games</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/simple-tips-to-win-more-racing-games</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/tips/how-to-avoid-fake-rewards-and-scams</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/how-to-build-better-in-minecraft</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/tips/fortnite-beginner-tips-for-better-practice</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/how-to-stay-safe-while-playing-online-games</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-improve-your-aim-in-games</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tips/how-to-avoid-scams-in-online-games</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/guides/best-settings-for-smooth-gameplay</loc>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/guides/how-to-find-hidden-game-secrets</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/guides/how-to-improve-your-aim</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hammad-s-guide.web.app/guides/how-to-save-coins-and-rewards</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hammad-s-guide.web.app/guides/simple-tips-to-win-more-racing-games</loc>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-complete-difficult-levels</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-save-coins-and-rewards</loc>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-choose-the-right-character</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-practice-without-getting-angry</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/safe-online-gaming-rules-for-kids</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/best-games-for-kids-age-8-15</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-take-gaming-breaks</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/guides/how-to-balance-gaming-and-study</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/gaming-tips-starter-pack</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/safe-gaming-checklist</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/minecraft-build-ideas-pack</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/roblox-obby-practice-tracker</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/gaming-break-planner</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/pro-tips-bundle</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/safe-gaming-rules-poster</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/beginner-gaming-practice-sheet</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/parent-gaming-agreement</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/weekly-gaming-break-tracker</loc>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/game-review-sheet</loc>
   </url>
 </urlset>
