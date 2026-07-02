@@ -20,12 +20,17 @@ const About = () => {
           </div>
 
           <div className="glass-card p-8 md:p-12 mb-12 border-brand-primary/20">
-            <h2 className="text-2xl font-bold text-brand-primary mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-bold text-brand-primary mb-4">Why this website was created</h2>
             <p className="text-lg text-brand-muted leading-relaxed mb-6">
               Master Hammad’s gaming website is made for young players who enjoy learning tips, tricks, and simple guides. The goal is to help players improve their skills, understand games better, and play in a safe and balanced way.
             </p>
+            <h2 className="text-2xl font-bold text-brand-primary mb-4 mt-8">Who is Master Hammad?</h2>
+            <p className="text-lg text-brand-muted leading-relaxed mb-6">
+              Master Hammad is a passionate gamer who wants to share their knowledge with the next generation of players. They believe gaming should be fun, educational, and most importantly, safe.
+            </p>
+            <h2 className="text-2xl font-bold text-brand-primary mb-4 mt-8">Message for young gamers</h2>
             <p className="text-lg text-brand-muted leading-relaxed">
-              We believe gaming should be fun, educational, and safe. That's why we focus on beginner-friendly content, positive strategies, and important online safety habits for kids and young teens aged 8–15.
+              Games are supposed to be fun! If you ever feel frustrated or angry, it's okay to take a break. Remember to be kind to other players, and always ask a parent if you see something that makes you uncomfortable online.
             </p>
           </div>
 
@@ -50,7 +55,7 @@ const About = () => {
             </div>
 
             <div className="glass-card p-8 border-brand-purple/20 bg-brand-purple/5">
-              <h3 className="text-xl font-bold text-brand-purple mb-4">For Parents</h3>
+              <h3 className="text-xl font-bold text-brand-purple mb-4">Message for parents</h3>
               <p className="text-brand-muted leading-relaxed mb-4">
                 This platform is designed with child safety as the top priority. We do not host public chat rooms, we do not ask for personal information, and our content is strictly moderated to ensure it is age-appropriate.
               </p>

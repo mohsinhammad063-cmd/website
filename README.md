@@ -4,7 +4,9 @@ A complete responsive gaming tips website for children and young teens aged 8–
 
 ## Description
 
-This project is a modern gaming website featuring a dark console-style theme, neon highlights, smooth animations, and a kid-friendly design. It includes beginner guides, game tips, safe gaming advice, and top game lists, all tailored for a young audience (ages 8-15) and parent-approved.
+This project is a modern, polished gaming website featuring a dark console-style theme, neon highlights, smooth animations, and a kid-friendly design. It includes beginner guides, game tips, safe gaming advice, and top game lists, all tailored for a young audience (ages 8-15) and parent-approved. It is fully ready for Google indexing with proper SEO metadata and Firebase Hosting.
+
+**Live Site URL:** https://hammad-s-guide.web.app/
 
 ## Tech Stack
 
@@ -43,7 +45,7 @@ To create a production-ready build:
 npm run build
 ```
 
-The compiled output will be placed in the `dist` directory.
+The compiled output will be placed in the `dist` directory. Ensure there are no TypeScript errors before deploying.
 
 ## How to Deploy to Firebase
 

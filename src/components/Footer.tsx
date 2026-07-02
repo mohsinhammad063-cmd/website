@@ -4,9 +4,10 @@ import LogoBadge from './LogoBadge';
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Game Tips', path: '/game-tips' },
-  { name: 'Tricks & Guides', path: '/tricks-guides' },
+  { name: 'Tricks & Guides', path: '/tricks-and-guides' },
   { name: 'Best Games', path: '/best-games' },
   { name: 'Beginner Guides', path: '/beginner-guides' },
+  { name: 'Safe Gaming', path: '/safe-gaming' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
   { name: 'Privacy Policy', path: '/privacy-policy' },
@@ -81,7 +82,7 @@ const Footer = () => {
               Safety First
             </h3>
             <p className="text-brand-muted text-sm leading-relaxed">
-              This website is designed for kids and young teens. Always ask a parent or guardian before downloading new games or sharing any information online.
+              Play smart, take breaks, and always ask a parent before sharing information online.
             </p>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import GameCard from '../components/GameCard';
 
+import { Shield } from 'lucide-react';
+
 const categories = [
   {
     title: "Best Games for Beginners",
@@ -20,12 +22,30 @@ const categories = [
     ]
   },
   {
+    title: "Best Racing Games",
+    description: "Speed, drifts, and fast-paced action without the violence.",
+    games: [
+      { title: "Mario Kart 8 Deluxe", category: "Racing", description: "The ultimate family racing game with endless fun." },
+      { title: "Rocket League", category: "Sports/Racing", description: "Play soccer with rocket-powered cars." },
+      { title: "Trackmania", category: "Time Trial", description: "Race for the best time on crazy custom tracks." }
+    ]
+  },
+  {
+    title: "Best Puzzle Games",
+    description: "Exercise your brain with these smart challenges.",
+    games: [
+      { title: "Tetris Effect", category: "Puzzle", description: "A beautiful, relaxing take on the classic puzzle game." },
+      { title: "Portal 2 (Co-op)", category: "Logic", description: "Use portals to solve mind-bending physics puzzles." },
+      { title: "Captain Toad: Treasure Tracker", category: "Adventure", description: "Navigate small 3D levels to find stars." }
+    ]
+  },
+  {
     title: "Best Multiplayer Games",
     description: "Great games to play online with friends safely.",
     games: [
-      { title: "Rocket League", category: "Sports/Racing", description: "Play soccer with rocket-powered cars in quick 5-minute matches." },
       { title: "Splatoon 3", category: "Action", description: "Cover the map in ink in this colorful, kid-friendly team game." },
-      { title: "Fall Guys", category: "Party", description: "Navigate crazy obstacle courses against 59 other players." }
+      { title: "Fall Guys", category: "Party", description: "Navigate crazy obstacle courses against 59 other players." },
+      { title: "Among Us", category: "Social Deduction", description: "Find the impostor in a safe private lobby with friends." }
     ]
   },
   {
@@ -50,6 +70,18 @@ const BestGames = () => {
           <p className="text-lg text-brand-muted">
             Our top recommendations organized by category. Whether you want to build, race, or play with family, we have a list for you.
           </p>
+        </div>
+
+        <div className="glass-card p-6 border-brand-secondary/30 bg-brand-secondary/5 mb-12 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <Shield className="w-10 h-10 text-brand-secondary shrink-0" />
+          <div>
+            <h3 className="font-bold text-brand-text text-lg mb-2 text-center sm:text-left">Child Safety Note</h3>
+            <ul className="text-brand-muted list-disc list-inside space-y-1 text-sm md:text-base">
+              <li>Always check age ratings before playing a new game.</li>
+              <li>Ask parents before downloading or purchasing anything.</li>
+              <li>Avoid unknown online chat rooms or voice chats with strangers.</li>
+            </ul>
+          </div>
         </div>
 
         <div className="space-y-20">
