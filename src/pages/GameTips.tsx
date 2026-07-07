@@ -1,8 +1,82 @@
-import TipCard from '../components/TipCard';
-import { articles } from '../data/articles';
+import { Link } from 'react-router-dom';
+import { BookOpen, ArrowRight } from 'lucide-react';
+
+const tips = [
+  {
+    title: "Top 10 Minecraft Tips for Beginners",
+    description: "Learn how to survive your first night, find food, and build a safe shelter in Minecraft.",
+    game: "Minecraft",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "5 min",
+    slug: "top-10-minecraft-tips-for-beginners"
+  },
+  {
+    title: "How to Get Better at Roblox Obby Games",
+    description: "Master jumps, avoid common traps, and complete difficult obstacle courses with these simple tricks.",
+    game: "Roblox",
+    difficulty: "Medium" as const,
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-get-better-at-roblox-obby-games"
+  },
+  {
+    title: "Best Settings for Smooth Gameplay",
+    description: "Learn how to adjust your graphics and controls so your game runs faster and feels better to play.",
+    game: "General",
+    difficulty: "Easy" as const,
+    ageBadge: "8-15",
+    readTime: "3 min",
+    slug: "best-settings-for-smooth-gameplay"
+  },
+  {
+    title: "How to Practice Without Getting Frustrated",
+    description: "Tips on taking breaks, setting small goals, and staying calm when learning a new game.",
+    game: "General",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-practice-without-getting-frustrated"
+  },
+  {
+    title: "Simple Tips to Win More Racing Games",
+    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car.",
+    game: "Racing",
+    difficulty: "Medium" as const,
+    ageBadge: "8-15",
+    readTime: "3 min",
+    slug: "simple-tips-to-win-more-racing-games"
+  },
+  {
+    title: "How to Build Better in Minecraft",
+    description: "Move beyond dirt huts and learn how to use different blocks and shapes for cooler houses.",
+    game: "Minecraft",
+    difficulty: "Medium" as const,
+    ageBadge: "8-15",
+    readTime: "6 min",
+    slug: "how-to-build-better-in-minecraft"
+  },
+  {
+    title: "How to Stay Safe While Playing Online Games",
+    description: "Important rules for chatting, making friends, and protecting your personal information.",
+    game: "Safety",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "5 min",
+    slug: "how-to-stay-safe-while-playing-online-games"
+  },
+  {
+    title: "How to Avoid Scams in Online Games",
+    description: "Learn how to spot fake offers for free coins and items to keep your account safe.",
+    game: "Safety",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "4 min",
+    slug: "how-to-avoid-scams-in-online-games"
+  }
+];
 
 const GameTips = () => {
-  const tips = articles.filter(article => article.type === 'tip');
   return (
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6">

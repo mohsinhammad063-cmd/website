@@ -12,7 +12,35 @@ const categories = [
   { title: "Top 10 Lists", icon: ListOrdered, path: "/best-games", color: "brand-primary" },
 ];
 
-import { articles } from '../data/articles';
+const latestTips = [
+  {
+    title: "Top 10 Minecraft Tips for Beginners",
+    description: "Learn how to survive your first night, find food, and build a safe shelter.",
+    category: "Minecraft",
+    difficulty: "Beginner" as const,
+    ageBadge: "8-15",
+    readTime: "5 min",
+    link: "/minecraft-tips"
+  },
+  {
+    title: "How to Get Better at Roblox Obby Games",
+    description: "Master jumps, avoid common traps, and complete difficult obstacle courses with these simple tricks.",
+    category: "Roblox",
+    difficulty: "Medium" as const,
+    ageBadge: "8-15",
+    readTime: "4 min",
+    link: "/roblox-tips"
+  },
+  {
+    title: "Simple Tips to Win More Racing Games",
+    description: "Discover the best ways to corner, when to use boosts, and how to choose the right car for the track.",
+    category: "Racing Games",
+    difficulty: "Easy" as const,
+    ageBadge: "8-15",
+    readTime: "3 min",
+    link: "/racing-game-tips"
+  }
+];
 
 const popularGames = [
   { title: "Minecraft Tips", category: "Survival / Creative", description: "Build, explore, and survive safely.", link: "/minecraft-tips" },
@@ -79,8 +107,37 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {articles.filter(a => a.type === 'tip').slice(0, 3).map((tip, index) => (
-              <TipCard key={index} {...tip} />
+            {latestTips.map((tip, index) => (
+              <div key={index} className="glass-card overflow-hidden flex flex-col h-full border-brand-primary/20 hover:border-brand-primary/50 hover-lift group">
+                <div className="p-6 flex-grow">
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="px-3 py-1 text-xs font-bold rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20">
+                      {tip.category}
+                    </span>
+                    <div className="flex gap-2">
+                       <span className={`px-2 py-1 text-xs font-bold rounded-md border
+                          ${tip.difficulty === 'Beginner' ? 'bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20' :
+                            tip.difficulty === 'Easy' ? 'bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20' :
+                            'bg-brand-cta/10 text-brand-cta border-brand-cta/20'}`}>
+                         {tip.difficulty}
+                       </span>
+                       <span className="px-2 py-1 text-xs font-bold rounded-md bg-brand-purple/10 text-brand-purple border border-brand-purple/20">
+                         {tip.ageBadge}
+                       </span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-brand-text mb-3 group-hover:text-brand-primary transition-colors">{tip.title}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed line-clamp-3 mb-4">{tip.description}</p>
+                  <div className="flex items-center text-xs text-brand-muted/70 gap-4 mt-auto">
+                    <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" /> {tip.readTime}</span>
+                  </div>
+                </div>
+                <div className="border-t border-brand-primary/10 p-4 bg-brand-bg/30 group-hover:bg-brand-primary/5 transition-colors">
+                  <Link to={tip.link} className="text-brand-primary font-medium text-sm flex items-center justify-between w-full">
+                    Read Guide <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
 
