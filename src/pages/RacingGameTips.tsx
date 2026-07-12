@@ -54,11 +54,22 @@ const RacingGameTips = () => {
 
             <section className="glass-card p-8 border-white/10">
               <h2 className="text-2xl font-bold text-brand-text mb-6 flex items-center gap-3">
-                <Wrench className="w-6 h-6 text-brand-purple" /> Car Upgrade Tips
+                <Zap className="w-6 h-6 text-brand-cta" /> Track Practice
+              </h2>
+              <ul className="space-y-4 text-brand-muted text-lg">
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">1.</span> Play in Time Trial mode to learn the track without pressure from other drivers.</li>
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">2.</span> Memorize where the sharp corners and jumps are.</li>
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">3.</span> Look for shortcuts, but practice them before trying them in a real race.</li>
+              </ul>
+            </section>
+
+            <section className="glass-card p-8 border-white/10">
+              <h2 className="text-2xl font-bold text-brand-text mb-6 flex items-center gap-3">
+                <Wrench className="w-6 h-6 text-brand-purple" /> Upgrade Tips
               </h2>
               <ul className="space-y-4 text-brand-muted text-lg">
                 <li className="flex gap-3"><span className="text-brand-purple font-bold">1.</span> The fastest car isn't always the best. For beginners, choose a car with high "Handling" or "Acceleration" instead of "Top Speed."</li>
-                <li className="flex gap-3"><span className="text-brand-purple font-bold">2.</span> Learn the track! You can't upgrade your way out of not knowing where the corners are.</li>
+                <li className="flex gap-3"><span className="text-brand-purple font-bold">2.</span> Upgrade your tires and brakes first to help you stay on the track.</li>
               </ul>
             </section>
 

@@ -10,10 +10,10 @@ interface SEOProps {
 
 const SEO = ({
   title = "Tips & Tricks by Master Hammad | Gaming Tips for Kids and Teens",
-  description = "Explore beginner-friendly gaming tips, tricks, safe gaming advice, and game guides by Master Hammad for young players aged 8–15.",
+  description = "Explore beginner-friendly gaming tips, tricks, safe gaming advice, printable resources, and simple game guides by Master Hammad for young players aged 8–15.",
   type = "website",
   url = "https://hammad-s-guide.web.app/",
-  image = "https://hammad-s-guide.web.app/og-image.png"
+  image = "https://hammad-s-guide.web.app/og-image.svg"
 }: SEOProps) => {
   useEffect(() => {
     // Update title

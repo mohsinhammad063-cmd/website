@@ -43,12 +43,23 @@ const FortniteTips = () => {
 
             <section className="glass-card p-8 border-white/10">
               <h2 className="text-2xl font-bold text-brand-text mb-6 flex items-center gap-3">
-                <Gamepad className="w-6 h-6 text-brand-secondary" /> Practice & Movement
+                <Gamepad className="w-6 h-6 text-brand-secondary" /> Movement Tips
               </h2>
               <ul className="space-y-4 text-brand-muted text-lg">
                 <li className="flex gap-3"><span className="text-brand-secondary font-bold">1.</span> Never run in a straight line in open areas. Jump and slide to make yourself a harder target for snipers.</li>
-                <li className="flex gap-3"><span className="text-brand-secondary font-bold">2.</span> Use Creative mode to practice your aim and movement before jumping into a real Battle Royale match.</li>
+                <li className="flex gap-3"><span className="text-brand-secondary font-bold">2.</span> Always be moving. Even when looting, strafe side to side so you don't get easily snipped.</li>
                 <li className="flex gap-3"><span className="text-brand-secondary font-bold">3.</span> If you are playing Build Mode, practice placing walls and ramps quickly to protect yourself as soon as you are shot.</li>
+              </ul>
+            </section>
+
+            <section className="glass-card p-8 border-white/10">
+              <h2 className="text-2xl font-bold text-brand-text mb-6 flex items-center gap-3">
+                <Target className="w-6 h-6 text-brand-cta" /> Practice Tips
+              </h2>
+              <ul className="space-y-4 text-brand-muted text-lg">
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">1.</span> Use Creative mode to practice your aim and movement before jumping into a real Battle Royale match.</li>
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">2.</span> Drop into busy areas sometimes just to practice fighting, even if you lose fast.</li>
+                <li className="flex gap-3"><span className="text-brand-cta font-bold">3.</span> Try different weapons in practice maps to learn how they work.</li>
               </ul>
             </section>
 

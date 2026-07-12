@@ -11,34 +11,74 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hammad-s-guide.web.app/tricks-guides</loc>
+    <loc>https://hammad-s-guide.web.app/tricks-and-guides</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/best-games</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/beginner-guides</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/safe-gaming</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/minecraft-tips</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/roblox-tips</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/fortnite-tips</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/racing-game-tips</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/best-games-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/shop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/tips/top-10-minecraft-tips-for-beginners</loc>
@@ -107,6 +147,61 @@
   </url>
   <url>
     <loc>https://hammad-s-guide.web.app/guides/how-to-practice-without-getting-angry</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/gaming-tips-starter-pack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/safe-gaming-checklist</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/minecraft-build-ideas-pack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/roblox-obby-practice-tracker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/gaming-break-planner</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/products/pro-tips-bundle</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/safe-gaming-rules-poster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/beginner-gaming-practice-sheet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/parent-gaming-agreement</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/weekly-gaming-break-tracker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammad-s-guide.web.app/free-resources/game-review-sheet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
