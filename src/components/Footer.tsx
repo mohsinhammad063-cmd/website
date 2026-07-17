@@ -90,7 +90,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-brand-muted text-sm text-center md:text-left">
-            &copy; 2026 Tips & Tricks by Master Hammad. All rights reserved.
+            &copy; 2026 Tips & Tricks by Master Hammad. All rights reserved. <span className="opacity-50 ml-2">v-fixed-articles</span>
           </p>
           <div className="flex gap-4">
             <span className="px-3 py-1 text-xs font-medium bg-brand-bg rounded-full text-brand-primary border border-brand-primary/20">Kid-Friendly</span>

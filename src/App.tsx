@@ -44,8 +44,8 @@ function App() {
             <Route path="/racing-game-tips" element={<><SEO title="Racing Game Tips | Tips & Tricks by Master Hammad" description="Learn how to drift, take corners, and cross the finish line first." url="https://hammad-s-guide.web.app/racing-game-tips" /><RacingGameTips /></>} />
             <Route path="/best-games-for-kids" element={<><SEO title="Best Games for Kids | Tips & Tricks by Master Hammad" description="A curated list of fun, safe, and engaging games that are perfect for young players." url="https://hammad-s-guide.web.app/best-games-for-kids" /><BestGamesForKids /></>} />
 
-            <Route path="/tips/:id" element={<><SEO title="Article | Tips & Tricks by Master Hammad" description="Read our full gaming tips and guides." url="https://hammad-s-guide.web.app/" /><ArticleDetail /></>} />
-            <Route path="/guides/:id" element={<><SEO title="Guide | Tips & Tricks by Master Hammad" description="Read our full gaming guides." url="https://hammad-s-guide.web.app/" /><ArticleDetail /></>} />
+            <Route path="/tips/:slug" element={<><SEO title="Article | Tips & Tricks by Master Hammad" description="Read our full gaming tips and guides." url="https://hammad-s-guide.web.app/" /><ArticleDetail /></>} />
+            <Route path="/guides/:slug" element={<><SEO title="Guide | Tips & Tricks by Master Hammad" description="Read our full gaming guides." url="https://hammad-s-guide.web.app/" /><ArticleDetail /></>} />
 
             <Route path="/shop" element={<><SEO title="Official Shop | Tips & Tricks by Master Hammad" description="Checklists and resources for safe gaming." url="https://hammad-s-guide.web.app/shop" /><Shop /></>} />
             <Route path="/products" element={<><SEO title="Products | Tips & Tricks by Master Hammad" description="Official gaming tips products." url="https://hammad-s-guide.web.app/products" /><Shop /></>} />
